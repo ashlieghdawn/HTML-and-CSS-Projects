@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+	<script src="./JS/one_page_website.js"></script>
 </head>
 <body>
 	
@@ -35,40 +36,98 @@
 
 				<!-- PHOTO-CONTAINER 1 -->
 
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_1.jpg" width="200" height="300" alt="Saint-Chapelle Chapel Stained Glass">
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 1 -->
 
 				<!-- PHOTO-CONTAINER 2 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_2.jpg" width="200" height="300" alt="Eiffel Tower Through A Street">
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 2 -->
 
 				<!-- PHOTO-CONTAINER 3 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_3.jpg" width="200" height="300" alt="Sacre-Coeur Church">
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 3 -->
 
 				<!-- PHOTO-CONTAINER 4 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_4.jpg" width="200" height="300" alt="Eiffel Tower at night">
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
 					</div>
 				</div>
-				<!-- END PHOTO-CONTAINER 4 -->
+				<!-- END PHOTO-CONTAINER 4-->
 
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numbertext">1 / 4</div>
+							<img src="./images/thumb/thumbnail_1.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">2 / 4</div>
+							<img src="./images/thumb/thumbnail_2.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">3 / 4</div>
+							<img src="./images/thumb/thumbnail_3.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">4 / 4</div>
+							<img src="./images/thumb/thumbnail_4.jpg" style="width:100%">
+						</div>
+
+						<!-- NEXT AND PREVIOUS CONTROLS -->
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption text -->
+    					<div class="caption-container">
+						<p id="caption"></p>
+	  					</div>
+
+						<!-- THUMBNAIL IMAGE CONTROLS -->
+						<div class="column">
+							<img class="demo" src="./images/thumb/thumbnail_1.jpg" onclick="currentSlides(1)" alt="Sante-Chapelle">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/thumb/thumbnail_2.jpg" onclick="currentSlides(2)" alt="Streets of Paris with Eiffel Tower">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/thumb/thumbnail_3.jpg" onclick="currentSlides(3)" alt="Sacre-Coeur">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./images/thumb/thumbnail_4.jpg" onclick="currentSlides(4)" alt="Eiffel Tower at night">
+						</div>
+						<!-- END THUMBNAIL CONTROLS-->
+
+						
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
+
+	
 	<section>
 		<div>
 			<div>
